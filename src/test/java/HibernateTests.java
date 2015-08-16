@@ -1,4 +1,5 @@
 import entities.Product;
+import hibernate.HibernateUtil;
 import org.hibernate.Session;
 
 import java.util.List;

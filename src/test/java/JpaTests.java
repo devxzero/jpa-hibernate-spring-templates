@@ -1,5 +1,5 @@
 import entities.Product;
-import org.hibernate.Session;
+import jpa.JpaUtil;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

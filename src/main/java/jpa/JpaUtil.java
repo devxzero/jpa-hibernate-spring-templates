@@ -1,10 +1,11 @@
+package jpa;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.swing.text.html.parser.Entity;
 
 public class JpaUtil {
     private static final Logger logger = LoggerFactory.getLogger(JpaUtil.class);
@@ -14,7 +15,8 @@ public class JpaUtil {
 
     static {
         logger.info("Creating entityManagerFactory");
-        entityManagerFactory = Persistence.createEntityManagerFactory("myapp");
+        // This one automatically uses META-INF/persistence.xml
+        entityManagerFactory = Persistence.createEntityManagerFactory("jpa-hibernate");
     }
 
     public static EntityManagerFactory getEntityManagerFactory() {

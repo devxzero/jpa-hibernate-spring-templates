@@ -1,3 +1,5 @@
+package hibernate;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -15,7 +17,7 @@ public class HibernateUtil {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
             Configuration configuration = new Configuration();
-            configuration.configure();
+            configuration.configure("hibernate-standalone.cfg.xml");
             logger.info("Hibernate Configuration loaded");
 
             //apply configuration property settings to StandardServiceRegistryBuilder

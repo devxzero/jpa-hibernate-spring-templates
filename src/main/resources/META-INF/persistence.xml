@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
              version="2.0">
-    <persistence-unit name="myapp" transaction-type="RESOURCE_LOCAL">
+
+
+    <!-- You only need one persistence unit, the other is just for example -->
+
+    <persistence-unit name="jpa-hibernate-forward" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="hibernate.ejb.cfgfile" value="hibernate.cfg.xml" />
+            <property name="hibernate.ejb.cfgfile" value="hibernate-standalone.cfg.xml" />
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="jpa-hibernate-config-only" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="jpa-hibernate" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>entities.Product</class>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/test6" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="1234" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
         </properties>
     </persistence-unit>
 </persistence>
