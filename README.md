@@ -1,11 +1,11 @@
-# JPA + Hibernate + Spring quickstart template #
+# JPA + Hibernate + Spring + Data JPA - quickstart template #
 ## Templates/Examples ##
 * Hibernate standalone
 * Hibernate + JPA
 * Hibernate + Spring xml
 * Hibernate + JPA + Spring xml
-* Hibernate + JPA + Spring java
-* Hibernate + JPA + Spring java + Spring Data JPA
+* Hibernate + JPA + Spring annotations
+* Hibernate + JPA + Spring annotations + Spring Data JPA
 
 ## Specs ##
 * Hibernate 4.3.11.Final
