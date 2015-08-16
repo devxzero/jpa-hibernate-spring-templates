@@ -1,4 +1,4 @@
-# JPA + Hibernate + Spring + Data JPA - quickstart template #
+# JPA + Hibernate + Spring + Data JPA - quickstart templates #
 ## Templates/Examples ##
 * Hibernate standalone
 * Hibernate + JPA
